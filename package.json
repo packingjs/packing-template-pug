@@ -1,6 +1,6 @@
 {
   "name": "packing-template-pug",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "pug template middleware for express",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "homepage": "https://github.com/zhongzhi107/packing-template-pug#readme",
   "dependencies": {
     "clear-require": "^1.0.1",
-    "lodash": "^4.16.2",
+    "object-assign": "^4.1.0",
     "pug": "^2.0.0-beta6"
   }
 }
