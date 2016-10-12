@@ -13,7 +13,7 @@ module.exports = function(options) {
     templates: '.',
     mockData: '.',
     rewriteRules: {},
-    pretty: true // 是否输出带缩进格式的html
+    pretty: false // 是否输出带缩进格式的html
   }, options);
   return function(req, res, next) {
     var urlObject = url.parse(req.url);
