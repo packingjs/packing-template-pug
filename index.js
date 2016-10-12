@@ -12,7 +12,8 @@ module.exports = function(options) {
     extension: '.pug',
     templates: '.',
     mockData: '.',
-    rewriteRules: {}
+    rewriteRules: {},
+    pretty: true // 是否输出带缩进格式的html
   }, options);
   return function(req, res, next) {
     var urlObject = url.parse(req.url);
@@ -35,7 +36,7 @@ module.exports = function(options) {
           console.log('File "' + dataAbsPath + ' require failed.\n' + e);
         }
       }
-      var output = pug.renderFile(templateAbsPath, context);
+      var output = pug.renderFile(templateAbsPath, assign(options, context));
       res.end(output);
     } else {
       next();
