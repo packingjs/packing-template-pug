@@ -33,6 +33,6 @@
     "pug": "^2.0.0-beta6"
   },
   "devDependencies": {
-    "babel": "^6.23.0"
+    "babel-cli": "^6.24.1"
   }
 }
