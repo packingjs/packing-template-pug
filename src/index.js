@@ -16,7 +16,7 @@ module.exports = function(options) {
     rewriteRules: {},
     pretty: false // 是否输出带缩进格式的html
   }, options);
-  return function(req, res, next) {
+  return async (req, res, next) => {
     var urlObject = url.parse(req.url);
     var pathname = options.rewriteRules[urlObject.pathname] || urlObject.pathname;
     var templateAbsPath = path.resolve(path.join(options.templates, pathname));
@@ -28,6 +28,13 @@ module.exports = function(options) {
         var gcontext = require(globalDataPath);
         if (util.isFunction(gcontext)) {
           globalContext = gcontext(req, res);
+          if (globalContext instanceof Promise) {
+            await globalContext.then((data) => {
+              globalContext = data;
+            }, (error) => {
+              console.error(error);
+            });
+          }
         } else {
           globalContext = gcontext;
         }
@@ -37,6 +44,13 @@ module.exports = function(options) {
         var pcontext = require(dataAbsPath);
         if (util.isFunction(pcontext)) {
           pageContext = pcontext(req, res);
+          if (pageContext instanceof Promise) {
+            await pageContext.then((data) => {
+              pageContext = data;
+            }, (error) => {
+              console.error(error);
+            });
+          }
         } else {
           pageContext = pcontext;
         }

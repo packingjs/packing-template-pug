@@ -2,10 +2,14 @@
   "name": "packing-template-pug",
   "version": "1.0.6",
   "description": "pug template middleware for express",
-  "main": "index.js",
+  "main": "/dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "babel src -d dist"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/packingjs/packing-template-pug.git"
@@ -27,5 +31,8 @@
     "clear-require": "^1.0.1",
     "object-assign-deep": "0.0.4",
     "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0"
   }
 }
