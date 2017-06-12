@@ -25,6 +25,7 @@ module.exports = function(options) {
     if (fs.existsSync(templateAbsPath)) {
       var globalContext = {};
       if (fs.existsSync(globalDataPath)) {
+        clearRequire(globalDataPath);
         var gcontext = require(globalDataPath);
         if (util.isFunction(gcontext)) {
           globalContext = gcontext(req, res);
@@ -41,6 +42,7 @@ module.exports = function(options) {
       }
       var pageContext = {};
       if (fs.existsSync(dataAbsPath)) {
+        clearRequire(dataAbsPath);
         var pcontext = require(dataAbsPath);
         if (util.isFunction(pcontext)) {
           pageContext = pcontext(req, res);
