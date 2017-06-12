@@ -5,7 +5,9 @@
   "main": "/dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "babel src -d dist"
+    "prepublish": "babel src -d dist",
+    "release": "standard-version",
+    "postrelease": "git push && git push origin --tags"
   },
   "files": [
     "dist"
