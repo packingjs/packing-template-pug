@@ -31,7 +31,7 @@
   "homepage": "https://github.com/packingjs/packing-template-pug#readme",
   "dependencies": {
     "object-assign-deep": "0.3.1",
-    "packing-template-util": "^1.0.0",
+    "packing-template-util": "^1.0.1",
     "pug": "^2.0.0-rc.2"
   },
   "devDependencies": {
