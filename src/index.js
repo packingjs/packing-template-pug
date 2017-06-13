@@ -1,3 +1,4 @@
+import { existsSync } from 'fs';
 import assign from 'object-assign-deep';
 import pug from 'pug';
 import { getPath, getContext } from 'packing-template-util';
@@ -15,7 +16,7 @@ module.exports = function(options) {
   return async (req, res, next) => {
     const { templatePath, pageDataPath, globalDataPath } = getPath(req, options);
     if (existsSync(templatePath)) {
-      const context = getContext(req, res, pageDataPath, globalDataPath);
+      const context = await getContext(req, res, pageDataPath, globalDataPath);
       try {
         const output = pug.renderFile(templatePath, assign(options, context));
         res.end(output);
