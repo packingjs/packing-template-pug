@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.7"></a>
+## [1.1.7](https://github.com/packingjs/packing-template-pug/compare/v1.1.6...v1.1.7) (2017-06-13)
+
+
+### Bug Fixes
+
+* 修复模版解析错误 ([9ecc34c](https://github.com/packingjs/packing-template-pug/commit/9ecc34c))
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/packingjs/packing-template-pug/compare/v1.1.5...v1.1.6) (2017-06-13)
 
