@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.6"></a>
+## [1.1.6](https://github.com/packingjs/packing-template-pug/compare/v1.1.5...v1.1.6) (2017-06-13)
+
+
+### Bug Fixes
+
+* 增加babel-plugin-transform-runtime，修复target为低版本node时缺乏runtime的错误 ([1a9670f](https://github.com/packingjs/packing-template-pug/commit/1a9670f))
+
+
+
 <a name="1.1.5"></a>
 ## [1.1.5](https://github.com/packingjs/packing-template-pug/compare/v1.1.4...v1.1.5) (2017-06-12)
 
