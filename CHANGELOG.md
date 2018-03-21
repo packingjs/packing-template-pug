@@ -10,6 +10,9 @@ All notable changes to this project will be documented in this file. See [standa
 <a name="1.1.8"></a>
 ## [1.1.8](https://github.com/packingjs/packing-template-pug/compare/v1.1.7...v1.1.8) (2018-03-21)
 
+### Features
+
+* 支持 packing v3 
 
 
 <a name="1.1.7"></a>
