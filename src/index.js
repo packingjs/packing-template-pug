@@ -17,10 +17,11 @@ module.exports = function(options) {
   return async (req, res, next) => {
     const { templatePath, pageDataPath, globalDataPath } = getPath(req, options);
     const context = await getContext(req, res, pageDataPath, globalDataPath);
-    const { template, filename } = res;
+    const { template, filename, basedir } = res;
     if (template) {
       try {
         const output = pug.render(template, assign(options, context, {
+          basedir,
           filename
         }));
         res.end(output);
