@@ -1,6 +1,6 @@
 {
   "name": "packing-template-pug",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "pug template middleware for express",
   "main": "dist/index.js",
   "scripts": {
