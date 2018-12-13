@@ -20,7 +20,7 @@ module.exports = function(options) {
     const { template, filename, basedir } = res;
     if (template) {
       try {
-        const output = pug.render(template, assign(options, context, {
+        const output = pug.render(template, assign.noMutate(options, context, {
           basedir,
           filename
         }));
@@ -31,7 +31,7 @@ module.exports = function(options) {
       }
     } else if (existsSync(templatePath)) {
       try {
-        const output = pug.renderFile(templatePath, assign(options, context));
+        const output = pug.renderFile(templatePath, assign.noMutate(options, context));
         res.end(output);
       } catch (e) {
         console.log(e);
